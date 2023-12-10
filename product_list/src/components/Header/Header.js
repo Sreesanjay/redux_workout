@@ -1,13 +1,15 @@
+import { useSelector } from "react-redux";
 import "./Header.css";
 export default function Header() {
+     const {cartList} = useSelector(state => state.cart);
      return (
           <header>
                <div className="container">
-                    <h1>Debug Media</h1>
+                    <h1>Seller.com</h1>
 
                     <div className="right-section">
                          <div className="cart-count-header">
-                              1
+                              {cartList?.length}
                          </div>
                          <svg
                               width="32"
